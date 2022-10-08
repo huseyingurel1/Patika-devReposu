@@ -171,7 +171,8 @@
            email VARCHAR(100)    
        )
 
--- Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+-- Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 20 adet veri ekleyelim.
+
        insert into employee (id, name, birthday, email) values (1, 'Winna', '6/25/1993', 'wbenza0@yelp.com');
        insert into employee (id, name, birthday, email) values (2, 'Everett', '6/30/2022', 'ecrosseland1@rediff.com');
        insert into employee (id, name, birthday, email) values (3, 'Lishe', '12/24/2017', 'lloughren2@chron.com');
@@ -193,35 +194,6 @@
        insert into employee (id, name, birthday, email) values (19, 'Carl', '10/15/2000', 'cmcmurtyi@tuttocitta.it');
        insert into employee (id, name, birthday, email) values (20, 'Kain', '11/28/2000', 'kdudeneyj@yelp.com');
        insert into employee (id, name, birthday, email) values (21, 'Munmro', '10/17/2011', 'mbarockk@addthis.com');
-       insert into employee (id, name, birthday, email) values (22, 'Merry', '1/21/2014', 'mfilkinl@github.com');
-       insert into employee (id, name, birthday, email) values (23, 'Isa', '1/13/2020', 'iouslemm@163.com');
-       insert into employee (id, name, birthday, email) values (24, 'Dreddy', '1/16/2002', 'dgerrietn@mayoclinic.com');
-       insert into employee (id, name, birthday, email) values (25, 'Errol', '6/2/1999', 'erolfo@ustream.tv');
-       insert into employee (id, name, birthday, email) values (26, 'Ricky', '7/5/1992', 'rnewlingp@army.mil');
-       insert into employee (id, name, birthday, email) values (27, 'Crin', '10/2/2016', 'csayreq@xinhuanet.com');
-       insert into employee (id, name, birthday, email) values (28, 'Clim', '5/31/2022', 'cgregolinr@nifty.com');
-       insert into employee (id, name, birthday, email) values (29, 'Elisabeth', '2/9/2021', 'ejantels@facebook.com');
-       insert into employee (id, name, birthday, email) values (30, 'Rodi', '4/14/1992', 'rmartensent@addtoany.com');
-       insert into employee (id, name, birthday, email) values (31, 'Morie', '8/20/2006', 'mwhitseyu@twitpic.com');
-       insert into employee (id, name, birthday, email) values (32, 'Cheston', '7/1/1992', 'cbeefonv@disqus.com');
-       insert into employee (id, name, birthday, email) values (33, 'Charlene', '12/6/1998', 'cgrierw@woothemes.com');
-       insert into employee (id, name, birthday, email) values (34, 'Lonny', '11/27/2006', 'lelwoodx@shutterfly.com');
-       insert into employee (id, name, birthday, email) values (35, 'Patricia', '7/6/1994', 'praffertyy@mac.com');
-       insert into employee (id, name, birthday, email) values (36, 'Dolly', '6/1/2006', 'dmiltonz@jalbum.net');
-       insert into employee (id, name, birthday, email) values (37, 'Nadiya', '4/20/2012', 'nmaccahee10@twitpic.com');
-       insert into employee (id, name, birthday, email) values (38, 'Lynelle', '11/12/1996', 'lweatherburn11@twitpic.com');
-       insert into employee (id, name, birthday, email) values (39, 'Iolande', '3/6/1991', 'ichatelet12@comsenz.com');
-       insert into employee (id, name, birthday, email) values (40, 'Josephine', '6/4/2022', 'jwann13@posterous.com');
-       insert into employee (id, name, birthday, email) values (41, 'Susanne', '2/23/2015', 'sreay14@bloglines.com');
-       insert into employee (id, name, birthday, email) values (42, 'Carolyn', '11/1/2016', 'cliepina15@goo.ne.jp');
-       insert into employee (id, name, birthday, email) values (43, 'Danni', '10/7/2020', 'dhallewell16@elegantthemes.com');
-       insert into employee (id, name, birthday, email) values (44, 'Jobye', '9/7/2019', 'jfaust17@chronoengine.com');
-       insert into employee (id, name, birthday, email) values (45, 'Kathye', '2/9/1998', 'krickis18@photobucket.com');
-       insert into employee (id, name, birthday, email) values (46, 'Corilla', '11/13/2016', 'cgamlyn19@wikimedia.org');
-       insert into employee (id, name, birthday, email) values (47, 'Wilow', '11/20/1999', 'wgreswell1a@blinklist.com');
-       insert into employee (id, name, birthday, email) values (48, 'Maxi', '5/5/2018', 'mloweth1b@dedecms.com');
-       insert into employee (id, name, birthday, email) values (49, 'Louis', '9/19/2009', 'lfenimore1c@ustream.tv');
-       insert into employee (id, name, birthday, email) values (50, 'Enriqueta', '1/25/2009', 'efotheringham1d@bloglines.com');
        
 -- Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
 
@@ -234,6 +206,39 @@
 -- Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
        
        DELETE FROM employee WHERE id=1;
+       DELETE FROM employee WHERE id=2;
+       DELETE FROM employee WHERE id=3;
        
        
+# HOMEWORK9
+
+
+## Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
+
+-- city tablosu ile country tablosunda bulunan şehir (city) ve ülke (country) isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+       SELECT city,country FROM city INNER JOIN country ON city.city_id = country.country_id;
+
+-- customer tablosu ile payment tablosunda bulunan payment_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
+
+       SELECT payment_id, first_name, last_name FROM payment INNER JOIN customer ON payment.customer_id = customer.customer_id;
+
+-- customer tablosu ile rental tablosunda bulunan rental_id ile customer tablosundaki first_name ve last_name isimlerini birlikte görebileceğimiz INNER JOIN sorgusunu yazınız.
        
+       SELECT rental_id, first_name, last_name FROM rental INNER JOIN customer ON rental.rental_id= customer.customer_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
